@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema POS - Bazar y Papelería Tais | Jorge Hugo Quevedo Coronel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @media print {
+        body * {
+          visibility: hidden;
+        }
+        #area-impresion-termica, #area-impresion-termica * {
+          visibility: visible;
+        }
+        #area-impresion-termica {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 78mm;
+          padding: 2mm;
+          font-family: monospace;
+          font-size: 11px;
+          color: #000;
+          background: #fff;
+          box-shadow: none !important;
+          border: none !important;
+        }
+        .no-print {
+          display: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-slate-100 select-none">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
